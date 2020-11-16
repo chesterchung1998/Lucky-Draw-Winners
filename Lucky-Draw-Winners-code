@@ -1,0 +1,15 @@
+def findWinners():
+    r = 0
+    fd = int(input("Enter factor-digit: "))
+    if fd<1 or fd>9:
+        fd = int(input("Enter factor-digit: "))
+    elif fd>=1 and fd<=9:
+        mhd = int(input("Enter must-have-digit: "))
+        if mhd<1 or mhd>9:
+            mhd = int(input("Enter must-have-digit: "))
+        elif mhd>=1 and mhd<=9:
+            n = int(input("Enter the number of participants: "))
+    for number in range (1,n+1):
+        if number % fd == 0 and str(mhd) in str(number):
+            r = r + 1
+    print ("Number of winners: ",r)
